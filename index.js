@@ -4,17 +4,41 @@ const calculadora = require('./calculadora/index')
 // Invocando pacote para usar o Prompt.
 const prompt = require('prompt-sync')()
 
+// Modulo para dar escolha ao usuario de qual operação ele quer fazer
+const readline = require('readline')
 
+// Aviso para o Usuário que a calculadora iniciou!
 console.log('Calculadora Iniciada, se divirtá!')
 
-setTimeout(() => {
-    // capturando os numeros digitados e atribuindo em uma variável
-    const num1 = parseInt(prompt('Digite o Primeiro numero: '))
-    const num2 = parseInt(prompt('Digite o Segundo numero: '))
+// CRIA INTERFACE DE COMUNICAÇÃO DE ENTRADA E SAIDA DAS INFORMAÇÕES
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
 
-    // chamando por operação e executando baseado no que o usuario digitou!
-    console.log('A soma do numero 1 e numero 2 resulta em: ', calculadora.somarNum(num1, num2))
-    console.log('A divisão do numero 1 e numero 2 resulta em: ', calculadora.dividirNums(num1, num2))
-    console.log('A subtração do numero 1 e numero 2 resulta em: ', calculadora.subtrairNums(num1, num2))
-    console.log('A multiplicação do numero 1 e numero 2 resulta em: ', calculadora.multiplicarNums(num1, num2))
-}, 1000);
+// OQUE APARECERA PRO CLIENTE ESCOLHER PARA DETERMINDADA AÇÃO
+setTimeout(() => {
+    rl.question('Qual operação matemática você deseja fazer? opções: "soma, subtrair, divisao e multiplicacao": ', resposta => {
+        const num1 = parseInt(prompt('Digite o Primeiro numero: '))
+        const num2 = parseInt(prompt('Digite o Segundo numero: '))
+
+        if (resposta === 'soma') {
+            calculadora.somarNum(num1, num2)
+        }
+
+        if (resposta === 'subtrair') {
+            calculadora.subtrairNums(num1, num2)
+        }
+
+        if (resposta === 'divisao') {
+            calculadora.dividirNums(num1, num2)
+        }
+
+        if (resposta === 'multiplicacao') {
+            calculadora.multiplicarNums(num1, num2)
+        }
+
+
+        rl.close()
+    })
+}, 1000)
