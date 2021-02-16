@@ -8,7 +8,7 @@ const prompt = require('prompt-sync')()
 const readline = require('readline')
 
 // Aviso para o Usuário que a calculadora iniciou!
-console.log('Calculadora Iniciada, se divirtá!')
+console.log('Calculadora Iniciada, se divirta!')
 
 // CRIA INTERFACE DE COMUNICAÇÃO DE ENTRADA E SAIDA DAS INFORMAÇÕES
 const rl = readline.createInterface({
