@@ -1,0 +1,19 @@
+{
+  "name": "begin-again",
+  "version": "1.0.0",
+  "description": "Repositório com intuito de aprendizado, desenvolvendo diversos Projetos/Desafios",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MVIEIRAB/begin-again.git"
+  },
+  "keywords": [],
+  "author": "Matheus V.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MVIEIRAB/begin-again/issues"
+  }
+}
