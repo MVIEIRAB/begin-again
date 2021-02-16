@@ -15,5 +15,8 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MVIEIRAB/begin-again/issues"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
   }
 }
