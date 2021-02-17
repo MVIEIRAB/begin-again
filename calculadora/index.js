@@ -1,6 +1,6 @@
 // FUNÇÕES PARA CADA OPERAÇÃO MATEMÁTICA
 const calculadora = {
-    somarNum: function (a, b) {
+    somarNums: function (a, b) {
         console.log('Resultado da SOMA É', a + b)
     },
     subtrairNums: function (a, b) {

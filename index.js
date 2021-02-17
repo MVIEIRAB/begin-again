@@ -23,7 +23,7 @@ setTimeout(() => {
         const num2 = parseInt(prompt('Digite o Segundo numero: '))
 
         if (resposta === 'soma') {
-            calculadora.somarNum(num1, num2)
+            calculadora.somarNums(num1, num2)
         }
 
         if (resposta === 'subtrair') {
@@ -37,7 +37,6 @@ setTimeout(() => {
         if (resposta === 'multiplicacao') {
             calculadora.multiplicarNums(num1, num2)
         }
-
 
         rl.close()
     })
